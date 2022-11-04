@@ -1,4 +1,4 @@
 az login
 az account list
 
-az ad sp create-for-rbac --name spels1 --role contributor --scopes /subscriptions/a39a4f77-4c6c-42b3-a9a1-1f96a9842799 --sdk-auth
+az ad sp create-for-rbac --name spels1 --role contributor --scopes /subscriptions/1a432800-95d3-475c-8c21-b3b32f7143eb --sdk-auth
