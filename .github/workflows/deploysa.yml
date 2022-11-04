@@ -48,3 +48,12 @@ jobs:
           deploymentName: ${{github.run_number}}
           resourceGroupName: ${{env.RG_Name}}
           template: ./storage.bicep
+
+      - uses: azure/arm-deploy@v1
+        name: deploy sa container
+        id: deploy-sa-container
+        with:
+          deploymentName: ${{github.run_number}}
+          resourceGroupName: ${{env.RG_Name}}
+          template: ./blobcontainer.bicep
+          parameters: mysaname=${{steps.deploy-sa.outputs.mysaname}}
